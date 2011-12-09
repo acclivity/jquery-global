@@ -40,7 +40,11 @@ test("Number Formatting - p for percentage", function() {
 	equal( Globalize.format(0.12345, "p0"), "12%" );
 	equal( Globalize.format(0.12345, "p2"), "12.35%" );
 	equal( Globalize.format(0.12345, "p4"), "12.3450%" );
-	equal( Globalize.format(12, "p"), "12%" );
+	equal( Globalize.format(12, "p"), "1,200%" );
+	equal( Globalize.format(1, "p"), "100%");
+	equal( Globalize.format(1.1, "p"), "110%");
+	equal( Globalize.format(2, "p"), "200%");
+	equal( Globalize.format(2.5, "p"), "250%");
 });
 
 test("NaN", function() {
